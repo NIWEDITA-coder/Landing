@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Lodha</title>
+  <title>Real Estate</title>
   <!-- Stylesheets -->
 
   <link href="css/bootstrap.css" rel="stylesheet">
@@ -27,6 +27,8 @@ table th, table td {
   border: 3px solid black;
   font-weight: bold;
   padding: 10px;}
+
+  
 
   .popup-form {
   display: none;
@@ -172,30 +174,91 @@ table th, table td {
 
 
   .map-section{background: linear-gradient(rgba(138, 43, 226, 0.6), rgba(138, 43, 226, 0.6)),
-              url('https://blueviolet-mouse-739930.hostingersite.com/images/map.jpg') center center/cover no-repeat;
+  url('https://blueviolet-mouse-739930.hostingersite.com/images/map.jpg') center center/cover no-repeat;
   padding: 60px 0;
   color: white;
 }
+.top-bar {
+  text-align: right;
+  padding: 10px;
+}
+.navbar {
+  position: sticky;    
+  top: 0;               
+  background-color: #fff;
+  z-index: 9999;        
+  display: flex;
+  justify-content: flex-end;  
+  gap: 20px;           
+  padding: 15px 30px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+}
+.navbar a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
 
+.image-popup-container {
+  position: relative;
+  display: inline-block;
+}
 
+.target-image {
+  width: 100%;
+  height: auto;
+}
 
+.popup-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 200, 0, 0.9);
+  color: white;
+  padding: 30px;
+  border-radius: 20px;
+  text-align: center;
+  max-width: 500px;
+  width: 90%;
+  z-index: 2;
+  font-family: Arial, sans-serif;
+}
+
+.popup-box h2 {
+  margin-top: 0;
+}
+
+.contact-btn {
+  margin-top: 15px;
+  padding: 10px 25px;
+  background: black;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
 </style>
-</head>
-<body>
 
-  <!-- Top phone number -->
+</head>
+
+<body>
+ <!-- Top phone number -->
    
-  <div class="top-bar">
-    <img src="https://cdn-icons-png.flaticon.com/512/597/597177.png" alt="phone" width="30" />
-    <span>+91 9529155262</span>
+  <div class="top-bar ">
+    <img src="https://cdn-icons-png.flaticon.com/512/597/597177.png" alt="phone" width="30">
+    <span >+91 9529155262</span>
   </div>
   
 
   <!-- Navigation -->
-
-   
-  <nav class="navbar">
-    <a href="#">Home</a>
+<!-- Logo and tagline -->
+   <header class="main-header">
+    
+  <nav class="sm-12 navbar   ">
+  <div class="logo "><a href="#"><img src="images/real_estatelogo.png"class="justify-content-start" style="height:80px ;" alt="Real ESTATE"></a></div>
+ <div class="text "></div>
+    <a href="#"class="navbar active  ">Home</a>
     <a href="#">About Project</a>
     <a href="#">Amenities</a>
     <a href="#">Gallery</a>
@@ -204,25 +267,15 @@ table th, table td {
     <a href="#">Contact</a>
     <a href="#">Download Brochure</a>
   </nav>
+  </header>
 
-  <!-- Logo and tagline -->
-  <header class="main-header">
-    <div class="logo"><a href="#"><img src="https://blueviolet-mouse-739930.hostingersite.com/images/logo-1.png" style="height:80px;" alt="Logo"></a></div>
-      <div class="text">
   
- </div>
-</div>
-</header>
-
-    <section class="about-section" id="about-section" style="background: url();">
-    	<div class="auto-container">
-     <img src="https://blueviolet-mouse-739930.hostingersite.com/images/main-slider/3.jpg" alt="My Photo" width="1500">   
-<!--Section Title-->
-
+  
+  
 <!--enquiry button---->
 
 
-<button onclick="toggleForm()" onclick="openForm()"   class="enquiry-btn"id="enquireBtn" style="position: fixed; right: 0; top: 30% transform : rotate(-90deg); background : #b29d2e ;color : white; border: none; padding: 10px 20px; cursor: pointer ;">Enquiry Now</button>
+<button onclick="toggleForm()" onclick="openForm()" class="enquiry-btn"id="enquireBtn" style="position: fixed; right: 0; top: 30% transform : rotate(-90deg); background : #b29d2e ;color : white; border: none; padding: 10px 20px; cursor: pointer ;">Enquiry Now</button>
 <!-- Contact Form Popup -->
 <div id="contactForm" class="form-popup">
   <form class="form-container">
@@ -238,9 +291,9 @@ table th, table td {
     <input type="text" placeholder="Enter Contact No." name="contact" required>
 
     <div class="whatsapp">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
-      <span>+91 9529155262</span>
-    </div>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+  <span>+91 9529155262</span>
+  </div>
 <button type="submit" class="btn">Send</button>
     
   </form>
@@ -273,7 +326,7 @@ table th, table td {
 <div id="popupForm" class="popup-form">
   <div class="popup-content">
     <span class="close">&times;</span>
-    <img src="https://blueviolet-mouse-739930.hostingersite.com/images/logo-1.png" alt="Logo" style="height: 40px;"><br><br>
+    <img src="/images/real_estatelogo.png" alt="Logo" style="height: 40px;"><br><br>
     <h4><strong>Register here and Avail the Best Offers!!</strong></h4>
     <input type="text" placeholder="Name" required>
     <input type="text" placeholder="Phone" required>
@@ -297,7 +350,7 @@ table th, table td {
     document.getElementById("popupForm").style.display = "none";
     
     // Re-show popup after 10 seconds (optional)
-    setTimeout(showPopup, 10000);
+  setTimeout(showPopup, 10000);
   };
 
   window.onclick = function (event) {
@@ -307,69 +360,118 @@ table th, table td {
       setTimeout(showPopup, 10000);
     }
   };
+  
+
 </script>
+   
+<div class="carousel-slide"  id="mycarousel" data-ride="carousel"data-interval="3000">
+  <!-- Slide 1 -->
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+<img src="images/3ima.png" class="d-block img-fluid w-100%"alt=""  >
+      <div class="carousel-slide" style="background-image: url('');">
+        <div class="popup-slide">
+          <h2>Real Estate</h2>
+          <p>"Offers 2–5 BHK homes starting from 90L*"</p>
+          <p><strong>Units:</strong> 2, 3, 4, & 5 BHK Homes</p>
+          <p>Possession: Dec 2025</p>
+          <p>MahaRERA No.: P52100050124</p>
+          <a href="#contact-section" class="btn btn-dark mt-2">Contact</a>
+        </div>
+      </div>
+    </div>
+
+
+
+<div class="carousel-item ">
+  <img src="images/18.png" class="d-block img-fluid w-100%"alt="" >
+
+      <div class="carousel-slide" style="background-image: url('');">
+        <div class="popup-slide">
+          <h2>Luxurious Homes</h2>
+          <p>At Hinjewadi</p>
+          <p>Area: 14 Acres</p>
+          <p>Storey: 35 Storeys</p>
+          <a href="#contact-section" class="btn btn-dark mt-2">Contact</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <!-- Slide 2 -->
+<a href="#mycarousel"class="carousel-control-prev " role="button" data-slide="prev">
+<span class="carousel-control-prev-icon"></span>
+</a>
+<a href="#mycarousel"class="carousel-control-next" role="button" data-slide="next">
+<span class="carousel-control-next-icon"></span>
+</a>
 
 
 
 
-                
-<div class="text" style="font-style:normal; font-size:16px ;margin:30px;padding:30px"><p>Welcome to Lodha Panache, a luxurious residential project nestled in the thriving suburb of Hinjewadi in Pune. Spread across 17 acres of verdant greenery, our project offers a wide range of 2, 3, 4, and 5 BHK homes that redefine the concept of luxury living. Our homes are thoughtfully designed to provide a seamless blend of comfort, convenience, and elegance. From spacious living areas to well-ventilated bedrooms, every aspect has been meticulously crafted to offer you the best living experience. With a variety of floor plans to choose from, you can select a home that perfectly suits your needs and preferences. We are now launching new luxury 2, 3, 4, and 5 BHK homes with contemporary amenities at Hinjewadi, Pune. Avail of our exclusive new launch offers. Booking is open.</p>
-<p>At Lodha Panache, we understand that amenities are crucial, and we have left no stone unturned in providing you with the best facilities. You can take a refreshing dip in our temperature-controlled swimming pool, work out at our state-of-the-art fitness center, or play a game of tennis or basketball at our sports courts. With a plethora of indoor and outdoor activities, you will always find something to do.</p>
+
+
+<div class="text" style="font-style:normal; font-size:16px ;margin:30px;padding:30px"><p>Welcome to ABC Panache, a luxurious residential project nestled in the thriving suburb of Hinjewadi in Pune. 
+Spread across 17 acres of verdant greenery, our project offers a wide range of 2, 3, 4, and 5 BHK homes that redefine the concept of luxury living. Our homes are thoughtfully designed to provide a seamless blend of comfort, convenience, and elegance.
+From spacious living areas to well-ventilated bedrooms, every aspect has been meticulously crafted to offer you the best living experience. With a variety of floor plans to choose from, you can select a home that perfectly suits your needs and preferences. We are now launching new luxury 2, 3, 4, and 5 BHK homes with contemporary amenities at Hinjewadi, Pune. Avail of our exclusive new launch offers. Booking is open.</p>
+<p>At ABC Panache, we understand that amenities are crucial, and we have left no stone unturned in providing you with the best facilities. You can take a refreshing dip in our temperature-controlled swimming pool, work out at our state-of-the-art fitness center, or play a game of tennis or basketball at our sports courts. With a plethora of indoor and outdoor activities, you will always find something to do.</p>
 <p>The project is strategically located in Hinjewadi, which is renowned for its excellent connectivity to major IT hubs and commercial centers in Pune. Whether you need to commute to work or explore the city, you will have easy access to major roads, highways, and public transport.</p>
-<p>At Lodha Panache, we are committed to providing you with a secure and comfortable living environment. With round-the-clock security and surveillance, you can rest assured of your safety at all times. Come and experience luxury living at its finest with Lodha Panache. Contact us today to book your dream home!</p>
+<p>At ABC Panache, we are committed to providing you with a secure and comfortable living environment. With round-the-clock security and surveillance, you can rest assured of your safety at all times. Come and experience luxury living at its finest with ABC Panache. Contact us today to book your dream home!</p>
 
 </div>
-            </div>
+</div>
 <!-----full images box-->
 <section class="about-section"id="about-section">
  </div>
+ <div class="icon-card text-center" style="min-height: 220px;">
+    
  <div class="container mt-4">
-    <div class="row">
-      <div class="col-md-2 col-xs-6">
+<div class="row">
+<div class="col-lg-2 col-md-4 col-sm-6 col-12 mb-4">>
+<div class="icon-card">
+<img src="https://blueviolet-mouse-739930.hostingersite.com/images/property.svg" style="height:70px;" class="icon-image" alt="Property">
+<h5>Property Type</h5>
+<p>Residential Project</p>
+</div>
+</div>
+<div class="col-lg-2 col-md-4 col-sm-6 col-12 mb-4">>
+ <div class="icon-card">
+<img src="https://blueviolet-mouse-739930.hostingersite.com/images/Configuration.svg" style="height:70px;"class="icon-image" alt="Configuration">
+<h5>Configuration</h5>
+<p>2, 3, 4 &amp; 5 BHK Homes</p>
+ </div>
+</div>
+<div class="col-lg-2 col-md-4 col-sm-6 col-12 mb-4">>
+<div class="icon-card">
+<img src="https://blueviolet-mouse-739930.hostingersite.com/images/price.svg" style="height:70px;"class="icon-image" alt="Price">
+<h5>Pricing</h5>
+<p>Starting ₹ 90 Lacs* Onwards</p>
+</div>
+</div>
+      <div class="col-lg-2 col-md-4 col-sm-6 col-12 mb-4">>
         <div class="icon-card">
-          <img src="https://blueviolet-mouse-739930.hostingersite.com/images/property.svg" class="icon-image" alt="Property">
-          <h5>Property Type</h5>
-          <p>Residential Project</p>
-        </div>
-      </div>
-      <div class="col-md-2 col-xs-6">
-        <div class="icon-card">
-          <img src="https://blueviolet-mouse-739930.hostingersite.com/images/Configuration.svg" class="icon-image" alt="Configuration">
-          <h5>Configuration</h5>
-          <p>2, 3, 4 &amp; 5 BHK Homes</p>
-        </div>
-      </div>
-      <div class="col-md-2 col-xs-6">
-        <div class="icon-card">
-          <img src="https://blueviolet-mouse-739930.hostingersite.com/images/price.svg" class="icon-image" alt="Price">
-          <h5>Pricing</h5>
-          <p>Starting ₹ 90 Lacs* Onwards</p>
-        </div>
-      </div>
-      <div class="col-md-2 col-xs-6">
-        <div class="icon-card">
-          <img src="https://blueviolet-mouse-739930.hostingersite.com/images/Possession.svg" class="icon-image" alt="Possession">
+          <img src="https://blueviolet-mouse-739930.hostingersite.com/images/Possession.svg"style="height:70px;" class="icon-image" alt="Possession">
           <h5>RERA Possession</h5>
           <p>Coming Soon</p>
         </div>
       </div>
-      <div class="col-md-2 col-xs-6">
+      <div class="col-lg-2 col-md-4 col-sm-6 col-12 mb-4">>
         <div class="icon-card">
-          <img src="https://blueviolet-mouse-739930.hostingersite.com/images/vastu.svg" class="icon-image" alt="Vastu">
+          <img src="https://blueviolet-mouse-739930.hostingersite.com/images/vastu.svg" style="height:70px;"class="icon-image" alt="Vastu">
           <h5>Vaastu Shastra</h5>
           <p>Vaastu Compliant</p>
         </div>
       </div>
-      <div class="col-md-2 col-xs-6">
+      <div class="col-lg-2 col-md-4 col-sm-6 col-12 mb-4">>
         <div class="icon-card">
-          <img src="https://blueviolet-mouse-739930.hostingersite.com/images/Location.svg" class="icon-image" alt="Location">
+          <img src="https://blueviolet-mouse-739930.hostingersite.com/images/Location.svg"style="height:70px;" class="icon-image" alt="Location">
           <h5>Location</h5>
           <p>at Hinjewadi Pune</p>
         </div>
       </div>
     </div>
   </div>
-  </section>section
+  </section>
 
   <!-- Property Details Tables -->
     <br>&nbsp;<br>
@@ -471,28 +573,30 @@ table th, table td {
 
 
 <section class="properties-section" id="properties-section"
-  style="background: linear-gradient(rgba(138, 43, 226, 0.6), rgba(138, 43, 226, 0.6)), url('images/back1.png') center center/cover no-repeat; padding: 60px 0;">
-  
+  style="background: linear-gradient(rgba(138, 43, 226, 0.6), rgba(175, 172, 179, 0.6)), url('images/back1.png') center center/cover no-repeat; padding: 60px 0;">
+  <div class="col-md-5 col-sm-6"></div>
   <div class="auto-container">
     <!-- Section Title -->
-    <div class="sec-title text-center" style="max-width: 100%; margin-bottom: 30px;">
-      <h2 style="color: #fff;">AMENITIES</h2>
-      <div class="separator small-separator"></div>
+    
+  <div class="container">
+    <div class="text-center mb-4">
+      <h2 style="color: white;">AMENITIES</h2>
     </div>
 
-    <div class="row">
+    <div class="row align-items-center">
       <!-- Left Side Image -->
-      <div class="col-md-5 col-sm-12 mb-4">
-        <div style="background: white; padding: 10px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.2);">
-          <img src="https://blueviolet-mouse-739930.hostingersite.com/images/gallery/17.jpg" class="img-fluid rounded" alt="Room Image">
-        </div>
+      <div class="col-lg-5 col-md-6 mb-4">
+    <div style="background: white; padding: 10px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.2);">
+  <img src="images/123.jpg"style="width:100%; height:100%;object-fit: cover; border-radius: 40px;max-height 10px;00px;" class="img-fluid rounded" alt="Room Image" >
+</div>
       </div>
 
+
       <!-- Right Side Bullet List -->
-      <div class="col-md-7 col-sm-12 text-white"> <!-- White text for contrast -->
+      <div class="col-lg-7 col-md-6 text-white">
         <div class="row">
-          <div class="col-md-6">
-            <ul style="list-style-type: disc;">
+          <div class="col-sm-6">
+            <ul style="list-style-type: disc; padding-left: 20px;">
               <li>Football (5-a-side) field</li>
               <li>Cricket field</li>
               <li>Multiple Badminton Courts</li>
@@ -509,18 +613,18 @@ table th, table td {
               <li>Hi-tech Gymnasium</li>
               <li>Café/lounge outdoor seating</li>
               <li>Party Hall</li>
+              <li>Kid's indoor play area</li>
               <li>Indoor Games area</li>
               <li>24x7 Security</li>
-              <li>Ev Charging Points</li>
             </ul>
           </div>
-          <div class="col-md-6">
-            <ul style="list-style-type: disc;">
+          <div class="col-sm-6">
+            <ul style="list-style-type: disc; padding-left: 20px;">
               <li>Gazebo</li>
               <li>Senior Citizen Area</li>
               <li>Skating Rink</li>
               <li>Acupressure Area</li>
-              <li>Yoga & Meditation</li>
+              <li>Yoga and Meditation Area</li>
               <li>Wall Climbing Area</li>
               <li>Kids Play Area</li>
               <li>Buffet Counter</li>
@@ -544,7 +648,7 @@ table th, table td {
   </div>
 </section>
 
-	<section id="gallery" class="text-center py-5">
+	<section name="gallery";id="gallery" class="text-center py-5">
   <h2 class="text-uppercase" style="color: #bfa44d;">Gallery</h2>
   <div class="border-top my-3" style="width: 60px; margin: auto; border-color: #bfa44d;"></div>
 
@@ -567,141 +671,141 @@ table th, table td {
 <!-- 1st Image -->
 <div class="container py-5">
 <div class="row">
-<div class="col-md-3 col-sm-6 mb-4">
+<div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
 <div class="position-relative">
-<img src="https://blueviolet-mouse-739930.hostingersite.com/images/gallery/1.jpg" class="img-fluid" alt="Image 1">
+<img src="images/1.png" class="img-fluid" alt="Image 1">
 <h5 class="position-absolute top-0 start-0 text-white p-2"></h5>
 </div>
 </div>
 
                 
-<div class="col-md-3 col-sm-6 mb-4">
+<div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
 <div class="position-relative">
-<img src="https://blueviolet-mouse-739930.hostingersite.com/images/gallery/2.jpg" class="img-fluid" alt="Image 2">
+<img src="images/2.png" class="img-fluid" alt="Image 2">
 <h5 class="position-absolute top-0 start-0 text-white p-2"></h5>
 </div>
 </div>
                 
-<div class="col-md-3 col-sm-6 mb-4">
+<div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
 <div class="position-relative">
-<img src="https://blueviolet-mouse-739930.hostingersite.com/images/gallery/3.jpg" class="img-fluid" alt="Image 3">
+<img src="images/3ima.png" class="img-fluid" alt="Image 3">
 <h5 class="position-absolute top-0 start-0 text-white p-2"></h5>
 </div>
 </div>
                 
-<div class="col-md-3 col-sm-6 mb-4">
+<div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
 <div class="position-relative">
-<img src="https://blueviolet-mouse-739930.hostingersite.com/images/gallery/4.jpg " class="img-fluid" alt="Image 4">
+<img src="images/4.png " class="img-fluid" alt="Image 4">
 <h5 class="position-absolute top-0 start-0 text-white p-2"></h5>
 </div>
 </div>
                 
-<div class="col-md-3 col-sm-6 mb-4">
+<div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
 <div class="position-relative">
-<img src="https://blueviolet-mouse-739930.hostingersite.com/images/gallery/5.jpg" class="img-fluid" alt="Image 5">
+<img src="images/5.png" class="img-fluid" alt="Image 5">
 <h5 class="position-absolute top-0 start-0 text-white p-2"></h5>
 </div>
 </div>
                 
- <div class="col-md-3 col-sm-6 mb-4">
+ <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
 <div class="position-relative">
-<img src="https://blueviolet-mouse-739930.hostingersite.com/images/gallery/6.jpg" class="img-fluid" alt="Image 6">
+<img src="images/6.png" class="img-fluid" alt="Image 6">
 <h5 class="position-absolute top-0 start-0 text-white p-2">\</h5>
 </div>
 </div>
                 
-               <div class="col-md-3 col-sm-6 mb-4">
+               <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
 <div class="position-relative">
-<img src="https://blueviolet-mouse-739930.hostingersite.com/images/gallery/7.jpg" class="img-fluid" alt="Image 7">
+<img src="images/7.webp" class="img-fluid" alt="Image 7">
 <h5 class="position-absolute top-0 start-0 text-white p-2">\</h5>
 </div>
 </div>
                 
-                <div class="col-md-3 col-sm-6 mb-4">
+                <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
 <div class="position-relative">
-<img src="https://blueviolet-mouse-739930.hostingersite.com/images/gallery/8.jpg" class="img-fluid" alt="Image 8">
+<img src="images/8.webp" class="img-fluid" alt="Image 8">
 <h5 class="position-absolute top-0 start-0 text-white p-2"></h5>
 </div>
 </div>
                 
-<div class="col-md-3 col-sm-6 mb-4">
+<div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
 <div class="position-relative">
 <img src="https://blueviolet-mouse-739930.hostingersite.com/images/gallery/9.jpg" class="img-fluid" alt="Image 9">
 <h5 class="position-absolute top-0 start-0 text-white p-2"></h5>
 </div>
 </div>
 
-<div class="col-md-3 col-sm-6 mb-4">
+<div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
 <div class="position-relative">
 <img src="https://blueviolet-mouse-739930.hostingersite.com/images/gallery/10.jpg" class="img-fluid" alt="Image 10">
 <h5 class="position-absolute top-0 start-0 text-white p-2"></h5>
 </div>
 </div>
                 
-<div class="col-md-3 col-sm-6 mb-4">
+<div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
 <div class="position-relative">
 <img src="https://blueviolet-mouse-739930.hostingersite.com/images/gallery/11.jpg"class="img-fluid" alt="image 11">
 <h5 class="position-absolute top-0 start-0 text-white p-2"></h5>
 </div>
 </div>
                 
-<div class="col-md-3 col-sm-6 mb-4">
+<div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
 <div class="position-relative">
 <img src="https://blueviolet-mouse-739930.hostingersite.com/images/gallery/12.jpg"class="img-fluid" alt="image 12">
 <h5 class="position-absolute top-0 start-0 text-white p-2"></h5>
 </div>
 </div>
                 
-<div class="col-md-3 col-sm-6 mb-4">
+<div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
 <div class="position-relative">
 <img src="https://blueviolet-mouse-739930.hostingersite.com/images/gallery/13.jpg"class="img-fluid" alt="image 13">
 <h5 class="position-absolute top-0 start-0 text-white p-2"></h5>
 </div>
 </div>
                 
-<div class="col-md-3 col-sm-6 mb-4">
+<div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
 <div class="position-relative">
 <img src="https://blueviolet-mouse-739930.hostingersite.com/images/gallery/14.jpg"class="img-fluid" alt="image 14">
 <h5 class="position-absolute top-0 start-0 text-white p-2"></h5>
 </div>
 </div>
                 
-<div class="col-md-3 col-sm-6 mb-4">
+<div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
 <div class="position-relative">
 <img src="https://blueviolet-mouse-739930.hostingersite.com/images/gallery/15.jpg"class="img-fluid" alt="image 15">
 <h5 class="position-absolute top-0 start-0 text-white p-2"></h5>
 </div>
 </div>
                 
-<div class="col-md-3 col-sm-6 mb-4">
+<div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
 <div class="position-relative">
 <img src="https://blueviolet-mouse-739930.hostingersite.com/images/gallery/16.jpg"class="img-fluid" alt="image 16">
 <h5 class="position-absolute top-0 start-0 text-white p-2"></h5>
 </div>
 </div>
 
-<div class="col-md-3 col-sm-6 mb-4">
+<div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
 <div class="position-relative">
   <img src="https://blueviolet-mouse-739930.hostingersite.com/images/gallery/17.jpg"class="img-fluid" alt="image 17">
 </div>
 </div>
              
 
-<div class="col-md-3 col-sm-6 mb-4">
+<div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
       <div class="position-relative">
         <img src="https://blueviolet-mouse-739930.hostingersite.com/images/gallery/18.jpg" class="img-fluid" alt="image 18">
         <h5 class="position-absolute top-0 start-0 text-white p-2"></h5>
       </div>
     </div>
 
-    <div class="col-md-3 col-sm-6 mb-4">
+    <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
       <div class="position-relative">
         <img src="https://blueviolet-mouse-739930.hostingersite.com/images/gallery/19.jpg" class="img-fluid" alt="image 19">
         <h5 class="position-absolute top-0 start-0 text-white p-2"></h5>
       </div>
     </div>
 
-    <div class="col-md-3 col-sm-6 mb-4">
+    <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
       <div class="position-relative">
         <img src="https://blueviolet-mouse-739930.hostingersite.com/images/gallery/20.jpg" class="img-fluid" alt="image 20">
         <h5 class="position-absolute top-0 start-0 text-white p-2"></h5>
@@ -710,252 +814,252 @@ table th, table td {
 
     <!---2images-->
 
-<div class="col-md-3 col-sm-6 mb-4">
+<div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
 <div class="position-relative">
 <img src="https://blueviolet-mouse-739930.hostingersite.com/images/floorplan/1.jpg" class="img-fluid" alt="image 1">
 <h5 class="position-absolute top-0 start-0 text-white p-2"></h5>
 </div>
 </div>
         
-<div class="col-md-3 col-sm-6 mb-4">
+<div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
 <div class="position-relative">
 <img src="https://blueviolet-mouse-739930.hostingersite.com/images/floorplan/2.jpg" class="img-fluid" alt="image 2">
 <h5 class="position-absolute top-0 start-0 text-white p-2"></h5>
 </div>
 </div>
         
-<div class="col-md-3 col-sm-6 mb-4">
+<div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
 <div class="position-relative">
 <img src="https://blueviolet-mouse-739930.hostingersite.com/images/floorplan/3.jpg" class="img-fluid" alt="image 3">
 <h5 class="position-absolute top-0 start-0 text-white p-2"></h5>
 </div>
 </div>
         
-<div class="col-md-3 col-sm-6 mb-4">
+<div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
 <div class="position-relative">
 <img src="https://blueviolet-mouse-739930.hostingersite.com/images/floorplan/4.jpg" class="img-fluid" alt="image 4">
 <h5 class="position-absolute top-0 start-0 text-white p-2"></h5>
 </div>
 </div>
         
-<div class="col-md-3 col-sm-6 mb-4">
+<div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
 <div class="position-relative">
 <img src="https://blueviolet-mouse-739930.hostingersite.com/images/floorplan/5.jpg" class="img-fluid" alt="image 5">
 <h5 class="position-absolute top-0 start-0 text-white p-2"></h5>
 </div>
 </div>
         
-<div class="col-md-3 col-sm-6 mb-4">
+<div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
 <div class="position-relative">
 <img src="https://blueviolet-mouse-739930.hostingersite.com/images/floorplan/6.jpg" class="img-fluid" alt="image 6">
 <h5 class="position-absolute top-0 start-0 text-white p-2"></h5>
 </div>
 </div>
         
-<div class="col-md-3 col-sm-6 mb-4">
+<div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
 <div class="position-relative">
 <img src="https://blueviolet-mouse-739930.hostingersite.com/images/floorplan/7.jpg" class="img-fluid" alt="image 7">
 <h5 class="position-absolute top-0 start-0 text-white p-2"></h5>
 </div>
 </div>
         
-<div class="col-md-3 col-sm-6 mb-4">
+<div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
 <div class="position-relative">
 <img src="https://blueviolet-mouse-739930.hostingersite.com/images/floorplan/8.jpg" class="img-fluid" alt="image 8">
 <h5 class="position-absolute top-0 start-0 text-white p-2"></h5>
 </div>
 </div>
 
-<div class="col-md-3 col-sm-6 mb-4">
+<div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
 <div class="position-relative">
 <img src="https://blueviolet-mouse-739930.hostingersite.com/images/floorplan/9.jpg" class="img-fluid" alt="image 9">
 <h5 class="position-absolute top-0 start-0 text-white p-2"></h5>
 </div>
 </div>
 
-<div class="col-md-3 col-sm-6 mb-4">
+<div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
 <div class="position-relative">
 <img src="https://blueviolet-mouse-739930.hostingersite.com/images/floorplan/10.jpg" class="img-fluid" alt="image 10">
 <h5 class="position-absolute top-0 start-0 text-white p-2"></h5>
 </div>
 </div>
 
-<div class="col-md-3 col-sm-6 mb-4">
+<div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
 <div class="position-relative">
 <img src="https://blueviolet-mouse-739930.hostingersite.com/images/floorplan/11.jpg" class="img-fluid" alt="image 11">
 <h5 class="position-absolute top-0 start-0 text-white p-2"></h5>
 </div>
 </div>
 
-<div class="col-md-3 col-sm-6 mb-4">
+<div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
 <div class="position-relative">
 <img src="https://blueviolet-mouse-739930.hostingersite.com/images/floorplan/12.jpg" class="img-fluid" alt="image 12">
 <h5 class="position-absolute top-0 start-0 text-white p-2"></h5>
 </div>
 </div>
 
-<div class="col-md-3 col-sm-6 mb-4">
+<div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
 <div class="position-relative">
 <img src="https://blueviolet-mouse-739930.hostingersite.com/images/floorplan/13.jpg" class="img-fluid" alt="image 13">
 <h5 class="position-absolute top-0 start-0 text-white p-2"></h5>
 </div>
 </div>
 
-<div class="col-md-3 col-sm-6 mb-4">
+<div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
 <div class="position-relative">
 <img src="https://blueviolet-mouse-739930.hostingersite.com/images/floorplan/14.jpg" class="img-fluid" alt="image 14">
 <h5 class="position-absolute top-0 start-0 text-white p-2"></h5>
 </div>
 </div>
 
-<div class="col-md-3 col-sm-6 mb-4">
+<div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
 <div class="position-relative">
 <img src="https://blueviolet-mouse-739930.hostingersite.com/images/floorplan/15.jpg" class="img-fluid" alt="image 15">
 <h5 class="position-absolute top-0 start-0 text-white p-2"></h5>
 </div>
 </div>
 
-<div class="col-md-3 col-sm-6 mb-4">
+<div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
 <div class="position-relative">
 <img src="https://blueviolet-mouse-739930.hostingersite.com/images/floorplan/16.jpg" class="img-fluid" alt="image 16">
 <h5 class="position-absolute top-0 start-0 text-white p-2"></h5>
 </div>
 </div>
 
-<div class="col-md-3 col-sm-6 mb-4">
+<div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
 <div class="position-relative">
 <img src="https://blueviolet-mouse-739930.hostingersite.com/images/floorplan/17.jpg" class="img-fluid" alt="image 17">
 <h5 class="position-absolute top-0 start-0 text-white p-2"></h5>
 </div>
 </div>
 
-<div class="col-md-3 col-sm-6 mb-4">
+<div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
 <div class="position-relative">
 <img src="https://blueviolet-mouse-739930.hostingersite.com/images/floorplan/18.jpg" class="img-fluid" alt="image 18">
 <h5 class="position-absolute top-0 start-0 text-white p-2"></h5>
 </div>
 </div>
 
-<div class="col-md-3 col-sm-6 mb-4">
+<div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
 <div class="position-relative">
 <img src="https://blueviolet-mouse-739930.hostingersite.com/images/floorplan/19.jpg" class="img-fluid" alt="image 19">
 <h5 class="position-absolute top-0 start-0 text-white p-2"></h5>
 </div>
 </div>
 
-<div class="col-md-3 col-sm-6 mb-4">
+<div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
 <div class="position-relative">
 <img src="https://blueviolet-mouse-739930.hostingersite.com/images/floorplan/20.jpg" class="img-fluid" alt="image 20">
 <h5 class="position-absolute top-0 start-0 text-white p-2"></h5>
 </div>
 </div>
 
-<div class="col-md-3 col-sm-6 mb-4">
+<div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
 <div class="position-relative">
 <img src="https://blueviolet-mouse-739930.hostingersite.com/images/floorplan/21.jpg" class="img-fluid" alt="image 21">
 <h5 class="position-absolute top-0 start-0 text-white p-2"></h5>
 </div>
 </div>
 
-<div class="col-md-3 col-sm-6 mb-4">
+<div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
 <div class="position-relative">
 <img src="https://blueviolet-mouse-739930.hostingersite.com/images/floorplan/22.jpg" class="img-fluid" alt="image 22">
 <h5 class="position-absolute top-0 start-0 text-white p-2"></h5>
 </div>
 </div>
 
-<div class="col-md-3 col-sm-6 mb-4">
+<div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
 <div class="position-relative">
 <img src="https://blueviolet-mouse-739930.hostingersite.com/images/floorplan/23.jpg" class="img-fluid" alt="image 23">
 <h5 class="position-absolute top-0 start-0 text-white p-2"></h5>
 </div>
 </div>
 
-<div class="col-md-3 col-sm-6 mb-4">
+<div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
 <div class="position-relative">
 <img src="https://blueviolet-mouse-739930.hostingersite.com/images/floorplan/24.jpg" class="img-fluid" alt="image 24">
 <h5 class="position-absolute top-0 start-0 text-white p-2"></h5>
 </div>
 </div>
 
-<div class="col-md-3 col-sm-6 mb-4">
+<div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
 <div class="position-relative">
 <img src="https://blueviolet-mouse-739930.hostingersite.com/images/floorplan/25.jpg" class="img-fluid" alt="image 25">
 <h5 class="position-absolute top-0 start-0 text-white p-2"></h5>
 </div>
 </div>
 
-<div class="col-md-3 col-sm-6 mb-4">
+<div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
 <div class="position-relative">
 <img src="https://blueviolet-mouse-739930.hostingersite.com/images/floorplan/26.jpg" class="img-fluid" alt="image 26">
 <h5 class="position-absolute top-0 start-0 text-white p-2"></h5>
 </div>
 </div>
 
-<div class="col-md-3 col-sm-6 mb-4">
+<div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
 <div class="position-relative">
 <img src="https://blueviolet-mouse-739930.hostingersite.com/images/floorplan/27.jpg" class="img-fluid" alt="image 27">
 <h5 class="position-absolute top-0 start-0 text-white p-2"></h5>
 </div>
 </div>
 
-<div class="col-md-3 col-sm-6 mb-4">
+<div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
 <div class="position-relative">
 <img src="https://blueviolet-mouse-739930.hostingersite.com/images/floorplan/28.jpg" class="img-fluid" alt="image 28">
 <h5 class="position-absolute top-0 start-0 text-white p-2"></h5>
 </div>
 </div>
 
-<div class="col-md-3 col-sm-6 mb-4">
+<div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
 <div class="position-relative">
 <img src="https://blueviolet-mouse-739930.hostingersite.com/images/floorplan/29.jpg" class="img-fluid" alt="image 29">
 <h5 class="position-absolute top-0 start-0 text-white p-2"></h5>
 </div>
 </div>
 
-<div class="col-md-3 col-sm-6 mb-4">
+<div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
 <div class="position-relative">
 <img src="https://blueviolet-mouse-739930.hostingersite.com/images/floorplan/30.jpg" class="img-fluid" alt="image 30">
 <h5 class="position-absolute top-0 start-0 text-white p-2"></h5>
 </div>
 </div>
 
-<div class="col-md-3 col-sm-6 mb-4">
+<div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
 <div class="position-relative">
 <img src="https://blueviolet-mouse-739930.hostingersite.com/images/floorplan/31.jpg" class="img-fluid" alt="image 31">
 <h5 class="position-absolute top-0 start-0 text-white p-2"></h5>
 </div>
 </div>
 
-<div class="col-md-3 col-sm-6 mb-4">
+<div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
 <div class="position-relative">
 <img src="https://blueviolet-mouse-739930.hostingersite.com/images/floorplan/32.jpg" class="img-fluid" alt="image 32">
 <h5 class="position-absolute top-0 start-0 text-white p-2"></h5>
 </div>
 </div>
 
-<div class="col-md-3 col-sm-6 mb-4">
+<div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
 <div class="position-relative">
 <img src="https://blueviolet-mouse-739930.hostingersite.com/images/floorplan/33.jpg" class="img-fluid" alt="image 33">
 <h5 class="position-absolute top-0 start-0 text-white p-2"></h5>
 </div>
 </div>
 
-<div class="col-md-3 col-sm-6 mb-4">
+<div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
 <div class="position-relative">
 <img src="https://blueviolet-mouse-739930.hostingersite.com/images/floorplan/34.jpg" class="img-fluid" alt="image 34">
 <h5 class="position-absolute top-0 start-0 text-white p-2"></h5>
 </div>
 </div>
 
-<div class="col-md-3 col-sm-6 mb-4">
+<div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
 <div class="position-relative">
 <img src="https://blueviolet-mouse-739930.hostingersite.com/images/floorplan/35.jpg" class="img-fluid" alt="image 35">
 <h5 class="position-absolute top-0 start-0 text-white p-2"></h5>
 </div>
 </div>
 
-<div class="col-md-3 col-sm-6 mb-4">
+<div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
 <div class="position-relative">
 <img src="https://blueviolet-mouse-739930.hostingersite.com/images/floorplan/36.jpg" class="img-fluid" alt="image 36">
 <h5 class="position-absolute top-0 start-0 text-white p-2"></h5>
@@ -1024,9 +1128,9 @@ text-align: center;
 <h2 style="color:#9c8414"><center>ABOUT</center></h2>
                 
                 
-<div class="text" style="font-style:normal; font-size:16px;margin:10px;padding:10px;"><p>Lodha Group is a highly respected and prestigious real estate developer in India. With more than 30 years of experience in the industry, the company has become synonymous with luxury living and high-quality construction. Lodha Group has developed a reputation for excellence, innovation, and attention to detail, which has helped them to build a strong foundation of trust with their customers.</p>
-<p>Their portfolio includes some of the most iconic residential and commercial projects across major cities in India. Lodha Group's commitment to quality is reflected in their use of cutting-edge technology, the finest materials, and the most skilled craftsmen to build their projects. The company is also renowned for their focus on sustainability, ensuring that their projects are built with the environment in mind.</p>
-<p>Lodha Group's commitment to customer satisfaction is unwavering, and they strive to exceed the expectations of their clients by delivering exceptional service and world-class amenities. The company's transparency in their dealings has earned them the trust and loyalty of their customers.</p>
+<div class="text" style="font-style:normal; font-size:16px;margin:10px;padding:10px;"><p>ABC Group is a highly respected and prestigious real estate developer in India. With more than 30 years of experience in the industry, the company has become synonymous with luxury living and high-quality construction. ABC Group has developed a reputation for excellence, innovation, and attention to detail, which has helped them to build a strong foundation of trust with their customers.</p>
+<p>Their portfolio includes some of the most iconic residential and commercial projects across major cities in India. ABC Group's commitment to quality is reflected in their use of cutting-edge technology, the finest materials, and the most skilled craftsmen to build their projects. The company is also renowned for their focus on sustainability, ensuring that their projects are built with the environment in mind.</p>
+<p>ABC Group's commitment to customer satisfaction is unwavering, and they strive to exceed the expectations of their clients by delivering exceptional service and world-class amenities. The company's transparency in their dealings has earned them the trust and loyalty of their customers.</p>
 </div>
 </div>
             
@@ -1046,26 +1150,26 @@ text-align: center;
 
 
   <div class="info-box">
-    <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
+    <div class="icon  btn btn-success"><i class="fas fa-map-marker-alt"></i></div>
     <div class="info">
       <h4>SITE ADDRESS</h4>
-      <p>At Hinjewadi, Pune</p>
+      <p>At Rampur, Noida</p>
     </div>
   </div>
 
   <div class="info-box">
-    <div class="icon"><i class="fas fa-phone-alt"></i></div>
+    <div class="icon btn btn-success"><i class="fas fa-phone-alt"></i></div>
     <div class="info">
       <h4>PHONE</h4>
-      <p>+91 9529155262</p>
+      <p>+91 8659745147</p>
     </div>
   </div>
 
   <div class="info-box">
-    <div class="icon"><i class="fas fa-envelope"></i></div>
+    <div class="icon btn btn-success"><i class="fas fa-envelope"></i></div>
     <div class="info">
       <h4>EMAIL</h4>
-      <p>puneprojectleads@gmail.com</p>
+      <p>realestate01@gmail.com</p>
     </div>
   </div>
 </div>
@@ -1103,7 +1207,7 @@ text-align: center;
                                 
 <div class="col-md-12 col-sm-12 col-xs-12 form-group text-center">
 <br>
-<button type="submit" name="submit" class="theme-btn btn-style-one">Send</button>
+<button type="submit" name="submit" class="theme-btn btn-style-one btn btn-outline-primary">Send</button>
 </div>
 </div>
 </form>
@@ -1118,12 +1222,12 @@ text-align: center;
   <div class="row">
     <div class="col text-center">
       <b>Disclaimer:</b> 
-      This website is managed by Lodha Panache's authorized marketing partner. All content is for informational purposes only and does not constitute an offer to avail of any service. Prices and availability of properties are subject to change without notice. Images are for representation purposes only. This website is the official website of the authorized marketing partner. We may share data with RERA registered brokers/companies for further processing. We may also send updates to the mobile number/email ID registered with us. All rights reserved.
+      This website is managed by ABC Panache's authorized marketing partner. All content is for informational purposes only and does not constitute an offer to avail of any service. Prices and availability of properties are subject to change without notice. Images are for representation purposes only. This website is the official website of the authorized marketing partner. We may share data with RERA registered brokers/companies for further processing. We may also send updates to the mobile number/email ID registered with us. All rights reserved.
     </div>
   </div>
   <div class="row mt-3">
     <div class="col text-center">
-Design &amp; Developed by: <a href="https://oyemarketor.com/" target="_blank">Oyemarketor</a>
+Design &amp; Developed by: <a href="https://github.com/NIWEDITA-coder/python-project/" target="_blank">Niwedita Pandey</a>
     </div>
   </div>
 </div>
@@ -1133,10 +1237,5 @@ Design &amp; Developed by: <a href="https://oyemarketor.com/" target="_blank">Oy
 
   <!--Scroll to top-->
 <div class="scroll-to-top"><span class="fa fa-arrow-up"></span></div>
-
-
-
-
-
 </body>
 </html>
