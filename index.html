@@ -9,6 +9,10 @@
   <link href="css/bootstrap.css" rel="stylesheet">
 <link href="css/revolution-slider.css" rel="stylesheet">
 <link href="css/style.css" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="shortcut icon" href="https://blueviolet-mouse-739930.hostingersite.com/images/favicon.png" />
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -238,10 +242,38 @@ table th, table td {
   border-radius: 20px;
   cursor: pointer;
 }
+.popup-slide {
+    position: absolute;
+    top: 20%;
+    left: -400px;
+    width: 300px;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    animation: slideInOut 10s infinite;
+    z-index: 10;
+  }
+
+  @keyframes slideInOut {
+    0% { left: -400px; opacity: 0; }
+    10% { left: 50px; opacity: 1; }
+    70% { left: 50px; opacity: 1; }
+    80% { left: -400px; opacity: 0; }
+    100% { left: -400px; opacity: 0; }
+  }
+
+  .popup-slide h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+
+  .popup-slide p {
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
 </style>
-
 </head>
-
 <body>
  <!-- Top phone number -->
    
@@ -370,7 +402,7 @@ table th, table td {
     <div class="carousel-item active">
 <img src="images/3ima.png" class="d-block img-fluid w-100%"alt=""  >
       <div class="carousel-slide" style="background-image: url('');">
-        <div class="popup-slide">
+        <div class="popup-slide bg-success">
           <h2>Real Estate</h2>
           <p>"Offers 2–5 BHK homes starting from 90L*"</p>
           <p><strong>Units:</strong> 2, 3, 4, & 5 BHK Homes</p>
@@ -387,7 +419,7 @@ table th, table td {
   <img src="images/18.png" class="d-block img-fluid w-100%"alt="" >
 
       <div class="carousel-slide" style="background-image: url('');">
-        <div class="popup-slide">
+        <div class="popup-slide bg-success">
           <h2>Luxurious Homes</h2>
           <p>At Hinjewadi</p>
           <p>Area: 14 Acres</p>
