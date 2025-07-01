@@ -298,6 +298,26 @@ table th, table td {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%2382b411' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
   }
 }
+.icon-box {
+  width: 60px;
+  height: 60px;
+  background-color: #8bc34a; /* same green as your screenshot */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-img {
+  width: 30px;
+  height: 30px;
+}
+
+.contact-label {
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
 
 
 
@@ -333,7 +353,7 @@ table th, table td {
         <div class="collapse navbar-collapse mobile-nav-bg" id="navbarNav">
 
         <ul class="navbar-nav ms-auto text-center">
-          <li class="nav-item"><a class="nav-link text-black" href="#">Home</a></li>
+          <li class="nav-item active "><a class="nav-link text-black " href="#">Home</a></li>
           <li class="nav-item"><a class="nav-link text-black" href="#">About Project</a></li>
           <li class="nav-item"><a class="nav-link text-black" href="#">Amenities</a></li>
           <li class="nav-item"><a class="nav-link text-black" href="#">Gallery</a></li>
@@ -491,42 +511,42 @@ From spacious living areas to well-ventilated bedrooms, every aspect has been me
     
  <div class="container mt-4">
 <div class="row">
-<div class="col-lg-2 col-md-4 col-sm-6 col-12 mb-4">>
+<div class="col-lg-2 col-md-4 col-sm-6 col-6  mb-4">>
 <div class="icon-card ">
 <img src="https://blueviolet-mouse-739930.hostingersite.com/images/property.svg" style="height:70px;" class="icon-image" alt="Property">
 <h5>Property Type</h5>
 <p>Residential Project</p>
 </div>
 </div>
-<div class="col-lg-2 col-md-4 col-sm-6 col-12 mb-4">>
+<div class="col-lg-2 col-md-4 col-sm-6 col-6 mb-4">>
  <div class="icon-card ">
 <img src="https://blueviolet-mouse-739930.hostingersite.com/images/Configuration.svg" style="height:70px;"class="icon-image" alt="Configuration">
 <h5>Configuration</h5>
 <p>2, 3, 4 &amp; 5 BHK Homes</p>
  </div>
 </div>
-<div class="col-lg-2 col-md-4 col-sm-6 col-12 mb-4">>
+<div class="col-lg-2 col-md-4 col-sm-6 col-6 mb-4">>
 <div class="icon-card ">
 <img src="https://blueviolet-mouse-739930.hostingersite.com/images/price.svg" style="height:70px;"class="icon-image img-fluid" alt="Price">
 <h5>Pricing</h5>
 <p>Starting ₹ 90 Lacs* Onwards</p>
 </div>
 </div>
-      <div class="col-lg-2 col-md-4 col-sm-6 col-12 mb-4">>
+      <div class="col-lg-2 col-md-4 col-sm-6 col-6 mb-4">>
         <div class="icon-card ">
           <img src="https://blueviolet-mouse-739930.hostingersite.com/images/Possession.svg"style="height:70px;" class="icon-image img-fluid  " alt="Possession">
           <h5>RERA Possession</h5>
           <p>Coming Soon</p>
         </div>
       </div>
-      <div class="col-lg-2 col-md-4 col-sm-6 col-12 mb-4">>
+      <div class="col-lg-2  col-md-4 col-sm-6 col-6 mb-4">>
         <div class="icon-card ">
           <img src="https://blueviolet-mouse-739930.hostingersite.com/images/vastu.svg" style="height:70px;"class="icon-image img-fluid" alt="Vastu">
           <h5>Vaastu Shastra</h5>
           <p>Vaastu Compliant</p>
         </div>
       </div>
-      <div class="col-lg-2 col-md-4 col-sm-6 col-12 mb-4">>
+      <div class="col-lg-2  col-md-4 col-sm-6 col-6 mb-4">>
         <div class="icon-card img-fluid">
           <img src="https://blueviolet-mouse-739930.hostingersite.com/images/Location.svg"style="height:70px;" class="icon-image img-fluid" alt="Location">
           <h5>Location</h5>
@@ -1203,19 +1223,15 @@ text-align: center;
             
 </div>
 </section>
-  
-<section class="default-section faded-section contact-section" id="contact-section" style="background-image:url(images/background/contact-bg.jpg);">
-<div class="auto-container">
-<div class="row clearfix">
-<!--Column-->
-<div class="col-md-12 col-sm-12 col-xs-12 column ">
-<h2 class="text-center">Contact Us</h2>
+  <!--Contact Info-->
+<section class="default-section faded-section contact-section img-fluid" id="contact-section" style="background-image: url('images/images/city.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+  <div class="auto-container py-5">
+    <h2 class="text-center mb-5">Contact Us</h2>
+
+<div class="row justify-content-center text-left">
                     
-<!--Contact Info-->
-
-
-  <div class="info-box">
-    <div class="icon  btn btn-success"><i class="fas fa-map-marker-alt"></i></div>
+<div class="info-box">
+    <div class="icon-box "><i class="fas fa-map-marker-alt"></i></div>
     <div class="info">
       <h4>SITE ADDRESS</h4>
       <p>At Rampur, Noida</p>
@@ -1223,7 +1239,7 @@ text-align: center;
   </div>
 
   <div class="info-box">
-    <div class="icon btn btn-success"><i class="fas fa-phone-alt"></i></div>
+    <div class="icon-box "><i class="fas fa-phone-alt"></i></div>
     <div class="info">
       <h4>PHONE</h4>
       <p>+91 8659745147</p>
@@ -1231,7 +1247,7 @@ text-align: center;
   </div>
 
   <div class="info-box">
-    <div class="icon btn btn-success"><i class="fas fa-envelope"></i></div>
+    <div class="icon-box "><i class="fas fa-envelope"></i></div>
     <div class="info">
       <h4>EMAIL</h4>
       <p>realestate01@gmail.com</p>
@@ -1271,9 +1287,8 @@ text-align: center;
       </div>
 
       <!-- Send Button -->
-    <div class="col-md-12 col-sm-12 col-xs-12 form-group text-center">
-<br>
-<button type="submit" name="submit" class="theme-btn btn-style-one bg-primary">Send</button>
+   <div class="col-md-12 col-sm-12 text-center mt-3">
+  <button type="submit" class="btn send-btn" style="background-color:#a18610">SEND</button>
 </div>
 </form>
 </div>
@@ -1281,7 +1296,8 @@ text-align: center;
 
     
 <!--Separator-->
-<footer class="disclaimer pload bg-light">
+<div class="container bg-light">
+<footer class="disclaimer pload ">
  <div class="container ">
   <div class="row ">
     <div class="col text-center ">
