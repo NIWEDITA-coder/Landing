@@ -25,6 +25,8 @@
 <link href="css/responsive.css" rel="stylesheet">
 <link href="cdn.lineicons.com/3.0/lineicons.css" rel="stylesheet">
 
+
+
 <style>table {
   border-collapse: collapse;
 }
@@ -301,7 +303,7 @@ table th, table td {
 .icon-box {
   width: 60px;
   height: 60px;
-  background-color: #8bc34a; /* same green as your screenshot */
+  background-color: #8bc34a; 
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -320,52 +322,108 @@ table th, table td {
 }
 
 
+.html {
+  scroll-behavior: smooth;
+}
 
   
+
+.top-bar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 40px;
+  background-color: white;
+  z-index: 1040;
+  padding: 5px 20px;
+  font-size: 14px;
+  line-height: 30px;
+}
+
+
+.navbar {
+  position: fixed;
+  top: 40px; 
+  width: 100%;
+  z-index: 1030;
+  transition: top 0.3s;
+  padding: 0px;
+}
+.nav-item{color:black;}
+
+ 
+  
+.nav-pills .nav-link.active {
+  background-color: #a18610;
+  color: white;
+}
+section {
+  scroll-margin-top: 120px;
+  padding-top: 20px; 
+}
+
+ 
 </style>
 </head>
-<body>
+<body >
  <!-- Top phone number -->
    
-  <div class="top-bar ">
-    <img src="https://cdn-icons-png.flaticon.com/512/597/597177.png" alt="phone" width="30">
+  <div class="top-bar  ">
+      <div class="container d-flex justify-content-end align-items-center">
+
+    <img src="https://cdn-icons-png.flaticon.com/512/597/597177.png" alt="phone" width="20">
     <span >+91 9529155262</span>
   </div>
   
+   
+</div>
+  
+
+
 
   <!-- Navigation -->
 <!-- Logo and tagline -->
-  <header class="main-header">
-    <nav class="navbar navbar-expand-lg desktop-navbar">
+ 
+  <header class="main-header " data-bs-spy="scroll "data-bs-target="#navbarNav"data-bs-offset="100"tabindex="0" >
+    
+    <nav class="navbar navbar-expand-lg desktop-navbar-light bg-white fixed-top  shadow-sm   ">
 
-    <div class="container-fluid">
+    <div class="container-fluid ">
       <!-- LOGO -->
       <a class="navbar-brand" href="#">
         <img src="images/images/real_estatelogo.png" alt="Real ESTATE" style="height: 60px;">
       </a>
 
       <!-- Toggle Button for Mobile -->
-      <button class="navbar-toggler bg-success" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+<button class="navbar-toggler bg-success" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
-
+      
       <!-- Menu Items -->
-        <div class="collapse navbar-collapse mobile-nav-bg" id="navbarNav">
+       
+        <div class="collapse navbar-collapse mobile-nav-bg " id="navbarNav">
 
         <ul class="navbar-nav ms-auto text-center">
-          <li class="nav-item active "><a class="nav-link text-black " href="#">Home</a></li>
-          <li class="nav-item"><a class="nav-link text-black" href="#">About Project</a></li>
-          <li class="nav-item"><a class="nav-link text-black" href="#">Amenities</a></li>
-          <li class="nav-item"><a class="nav-link text-black" href="#">Gallery</a></li>
-          <li class="nav-item"><a class="nav-link text-black" href="#">Location</a></li>
-          <li class="nav-item"><a class="nav-link text-black" href="#">About Us</a></li>
-          <li class="nav-item"><a class="nav-link text-black" href="#">Contact</a></li>
-          <li class="nav-item"><a class="nav-link text-black" href="#">Download Brochure</a></li>
+          <li class="nav-item nav nav-pills flex-column active "><a href="#home "class="nav-link ">Home</a></li>
+          <li class="nav-item nav nav-pills flex-column"><a  href="#about"class="nav-link ">About Project</a></li>
+          <li class="nav-item nav nav-pills flex-column"><a  href="#amenities"class="nav-link ">Amenities</a></li>
+          <li class="nav-item nav nav-pills flex-column"><a  href="#gallery"class="nav-link ">Gallery</a></li>
+          <li class="nav-item nav nav-pills flex-column"><a  href="#location"class="nav-link ">Location</a></li>
+          <li class="nav-item nav nav-pills flex-column"><a  href="#about-us"class="nav-link ">About Us</a></li>
+          <li class="nav-item nav nav-pills flex-column"><a  href="#contact"class="nav-link ">Contact</a></li>
+          <li class="nav-item nav nav-pills flex-column"><a  href="#download-brochure"class="nav-link ">Download Brochure</a></li>
         </ul>
       </div>
     </div>
   </nav>
+
 </header>
+
+
+
+
+
+
 <!--enquiry button---->
 
 <button onclick="toggleForm()" onclick="openForm()" class="enquiry-btn"id="enquireBtn" style="position: fixed; right: 0; top: 30% transform; rotate:(-90deg); background : #b29d2e ;color : white; border: none; padding: 10px 20px; cursor: pointer ;">Enquiry Now</button>
@@ -419,7 +477,7 @@ table th, table td {
 <div id="popupForm" class="popup-form">
   <div class="popup-content">
     <span class="close">&times;</span>
-    <img src="images/images\real_estatelogo.png" alt="Logo" style="height: 40px;"><br><br>
+    <img src="images/images/real_estatelogo.png" alt="Logo" style="height: 40px;"><br><br>
     <h4><strong>Register here and Avail the Best Offers!!</strong></h4>
     <input type="text" placeholder="Name" required>
     <input type="text" placeholder="Phone" required>
@@ -452,14 +510,14 @@ table th, table td {
     }
   };
   </script>
-
+  <section id="home">  </section>
    <div class="carousel-slide"  id="mycarousel" data-ride="carousel"data-interval="3000">
   <!-- Slide 1 -->
-  <div class="carousel-inner">
+  <div class="carousel-inner ">
     <div class="carousel-item active">
-<img src="images/images\3ima.png" class="d-block img-fluid w-100%"alt=""  >
+<img src="images/images/3ima.png" class="d-block img-fluid w-100%"alt=""  >
       <div class="carousel-slide" style="background-image: url('');">
-        <div class="popup-slide bg-success">
+        <div class="popup-slide "style="background-color:#4ae40d;">
           <h2>Real Estate</h2>
           <p>"Offers 2–5 BHK homes starting from 90L*"</p>
           <p><strong>Units:</strong> 2, 3, 4, & 5 BHK Homes</p>
@@ -473,10 +531,10 @@ table th, table td {
 
 
 <div class="carousel-item ">
-  <img src="images/images\18.png" class="d-block img-fluid w-100%"alt="" >
+  <img src="images/images/18.png" class="d-block img-fluid w-100%"alt="" >
 
       <div class="carousel-slide" style="background-image: url('');">
-        <div class="popup-slide bg-success">
+        <div class="popup-slide" style="background-color:#4ae40d;">
           <h2>Luxurious Homes</h2>
           <p>At Hinjewadi</p>
           <p>Area: 14 Acres</p>
@@ -494,6 +552,10 @@ table th, table td {
 <a href="#mycarousel"class="carousel-control-next" role="button" data-slide="next">
 <span class="carousel-control-next-icon"></span>
 </a>
+</div>
+  <section id="about">  </section>
+
+<div id="about"class="container-fluid">
 
 <div class="text" style="font-style:normal; font-size:16px ;margin:30px;padding:30px"><p>Welcome to ABC Panache, a luxurious residential project nestled in the thriving suburb of Hinjewadi in Pune. 
 Spread across 17 acres of verdant greenery, our project offers a wide range of 2, 3, 4, and 5 BHK homes that redefine the concept of luxury living. Our homes are thoughtfully designed to provide a seamless blend of comfort, convenience, and elegance.
@@ -505,6 +567,7 @@ From spacious living areas to well-ventilated bedrooms, every aspect has been me
 </div>
 </div>
 <!-----full images box-->
+
 <section class="about-section"id="about-section">
  </div>
  <div class="icon-card text-center" style="min-height: 220px;">
@@ -661,7 +724,8 @@ From spacious living areas to well-ventilated bedrooms, every aspect has been me
   <div class="col-md-5 col-sm-6"></div>
   <div class="auto-container">
     <!-- Section Title -->
-    
+  <section id="amenities">  </section>
+
   <div class="container">
     <div class="text-center mb-4">
       <h2 style="color: white;">AMENITIES</h2>
@@ -731,6 +795,7 @@ From spacious living areas to well-ventilated bedrooms, every aspect has been me
     </div>
   </div>
 </section>
+  <section id="gallery">  </section>
 
 	<section name="gallery";id="gallery" class="text-center py-5">
   <h2 class="text-uppercase" style="color: #bfa44d;">Gallery</h2>
@@ -1159,12 +1224,15 @@ From spacious living areas to well-ventilated bedrooms, every aspect has been me
     }
 </style>
 <!---location-->
+<section id="location"></section>
 <section class="properties-section" id="properties-section"
 style="background: linear-gradient(rgba(138, 43, 226, 0.6), rgba(138, 43, 226, 0.6)), url('images/back1.png') center center/cover no-repeat; padding: 60px 0;">
 <section class="properties-section" id="CONNECTIVITY" style="background: url(images/back1.png);">
 
 <div class="container-fluid">
 <!--Section Title-->
+<section id="location">  </section>
+
 <div class="sec-title text-center">
  <h2 style="color:#9c8414">Location</h2>
 <div class="separator small-separator"></div>
@@ -1209,6 +1277,10 @@ text-align: center;
     	<div class="auto-container">
         
 <!--Section Title-->
+<section id="about-us">  </section>
+
+<div class="container-fluid">
+
 <div class="sec-title text-center" style="max-width:100%">
 <h2 style="color:#9c8414">ABOUT</h2>
                 
@@ -1224,7 +1296,9 @@ text-align: center;
 </div>
 </section>
   <!--Contact Info-->
-<section class="default-section faded-section contact-section img-fluid" id="contact-section" style="background-image: url('images/images/city.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+<section id="contact">  </section>
+
+<section class="default-section faded-section contact-section img-fluid"  style="background-image: url('images/images/city.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
   <div class="auto-container py-5">
     <h2 class="text-center mb-5">Contact Us</h2>
 
@@ -1265,6 +1339,7 @@ text-align: center;
                 
 <!--Column-->
 <div class="col-md-12 col-sm-12 col-xs-12 column">
+<section id="download-brochure"></section>
 
 <!--Contact Form-->
 <section style="background-color: #f2f2f2; padding: 40px 0;">
@@ -1326,5 +1401,4 @@ Design &amp; Developed by: <a href="https://github.com/NIWEDITA-coder/python-pro
 </div>
 </body>
 </html>
-
-Output:-url(https://landing-page-niwedita.netlify.app/)
+output:-url(https://landing-page-realestate.netlify.app/)
